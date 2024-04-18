@@ -1,15 +1,15 @@
 #if 0
 // 𝐍𝐎𝐓𝐄: You will not be able to compile this as it relies on a simple 3d rendering engine which is
-// not included.  It is provided as an example of something interesting - prrogramming
+// not included.  It is provided as an example of something interesting - programming
 // interactively in a notebook interface while allowing full real-time virtual reality rendering.
 //
 // The way it works is it exports a few simple functions that call into a 3d rendering library for
-// inetractive visualization that uses vulkan or directx12 to give yuo a real-time 3d window with
+// interactive visualization that uses vulkan or directx12 to give you a real-time 3d window with
 // WASD controls and vr support.
 //
 // The interface provided is cheesy - all you can do is add spheres to the scene.  From Julia you
 // initialize it by calling StartRendering() which will spawn a thread to run the 3d ui.  This
-// means that rendering and camera movement iwll not be blocked by computation or compilation on
+// means that rendering and camera movement will not be blocked by computation or compilation on
 // the main thread.
 
 
