@@ -17,6 +17,10 @@ When you load the dll it will tell you what to type when you unload it. If you c
 
 You can run the included test.jl by typing "julia test.jl".
 
+ImportCpp works by loading a symbol table of exported functions and parameter types from the dll. It then uses Julia's ability to construct and compile code 
+at run time to build an AST tree defining the function binding, and then compiles it to native code. I'd never written this kind of code in Julia or for that
+matter much of any Julia code. I'm sure it could be a lot better but it didn't take long to write, it works, and yer gets what yer pay for :-).
+
 # Notebook interface demo
 These screenshots are me graphing a c++ implementation of "A Convenient Generalization of Schlick’s Bias and Gain Functions" (https://arxiv.org/pdf/2010.09714.pdf)
 inside of Jupyterlab.
