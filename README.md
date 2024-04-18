@@ -1,6 +1,8 @@
 # julia_embed
 A simple standalone system for exporting c++ functions so that they can be called from Julia. Does NOT require the Julia SDK.
 
+The main reason I wrote this was to be able to test c++ code in an interactive notebook-type interface combined with lots of visualization capabilities.
+
 These standalone files implement a simple system for exporting functions from c++ so that they can be called from Julia. It includes an interactive load/unload ability
 so that you can recompile your code and load new versions while debugging.
 
@@ -12,10 +14,12 @@ This code should build fine on any system. There are no dependencies and no Juli
 you have to do is link the 2 .cpp files into a loadable .dll/.so file.
 
 # Using in Julia
+No add-on packages for Julia are necessary to use this. Install Julia via your package manager or download from https://julialang.org/downloads/. 
+
+You can run the included test.jl by typing "julia test.jl" after building the dll. You might need to edit the path string in that file depending on where you built it to.
+
 You will first include "importcpp.jl" in your julia session. After that you can use ImportCPP( "path/to/dll_name" ). Note that you should leave off the .so or .dll extension.
 When you load the dll it will tell you what to type when you unload it. If you call an expoted function that has been unloaded, you will get an error.
-
-You can run the included test.jl by typing "julia test.jl".
 
 ImportCpp works by loading a symbol table of exported functions and parameter types from the dll. It then uses Julia's ability to construct and compile code 
 at run time to build an AST tree defining the function binding, and then compiles it to native code. I'd never written this kind of code in Julia or for that
