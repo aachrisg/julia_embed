@@ -14,7 +14,7 @@ This code should build fine on any system. There are no dependencies and no Juli
 you have to do is link the 2 .cpp files into a loadable .dll/.so file.
 
 # Using in Julia
-No add-on packages for Julia are necessary to use this. Install Julia via your package manager or download from https://julialang.org/downloads/. 
+No add-on packages for Julia are necessary to use this. Install Julia from https://julialang.org/downloads/. 
 
 You can run the included test.jl by typing "julia test.jl" after building the dll. You might need to edit the path string in that file depending on where you built it to.
 
@@ -28,6 +28,8 @@ matter much of any Julia code. I'm sure it could be a lot better but it didn't t
 # Notebook interface demo
 These screenshots are me graphing a c++ implementation of "A Convenient Generalization of Schlick’s Bias and Gain Functions" (https://arxiv.org/pdf/2010.09714.pdf)
 inside of Jupyterlab.
+To bring up a Julia jupyter notebook session in your browser, install the Julia package IJulia using the built in package manager. Then type "using IJulia; jupyterlab()" at the
+julia> prompt and a web interface will come up. It may take a little bit of time to start up the first time as it compiles the code.
 
 ![image](https://github.com/aachrisg/julia_embed/assets/43356352/02f80cfa-9252-45d8-b3bb-d01d8d9d55b3)
 *C++ code in Emacs*
