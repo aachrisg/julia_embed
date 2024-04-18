@@ -19,7 +19,7 @@ No add-on packages for Julia are necessary to use this. Install Julia via your p
 You can run the included test.jl by typing "julia test.jl" after building the dll. You might need to edit the path string in that file depending on where you built it to.
 
 You will first include "importcpp.jl" in your julia session. After that you can use ImportCPP( "path/to/dll_name" ). Note that you should leave off the .so or .dll extension.
-When you load the dll it will tell you what to type when you unload it. If you call an expoted function that has been unloaded, you will get an error.
+When you load the dll it will tell you what to type to unload it. If you call an exported function that has been unloaded, you will get an error.
 
 ImportCpp works by loading a symbol table of exported functions and parameter types from the dll. It then uses Julia's ability to construct and compile code 
 at run time to build an AST tree defining the function binding, and then compiles it to native code. I'd never written this kind of code in Julia or for that
