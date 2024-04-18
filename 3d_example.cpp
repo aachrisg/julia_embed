@@ -139,8 +139,8 @@ void StartDLL( int argc, char **argv )
 	EXPOSEFN( AddSphere );
 	EXPOSEFN( MoveSphere );
 	EXPOSEFN( ClearSpheres );
-	EXPOSEFN( StartRendering )
-		CTestApp *pApp = new CTestApp( 0, nullptr );
+	EXPOSEFN( StartRendering );
+	CTestApp *pApp = new CTestApp( 0, nullptr );
 	g_pApp = pApp;
 	new std::thread( []{
 		// Wait for start message. We need to create the window on this thread so that windows
