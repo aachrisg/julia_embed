@@ -11,8 +11,11 @@ to accomplish what I wanted - the ability to interactively produce a 3d realtime
 This code should build fine on any system. There are no dependencies and no Julia SDK is needed. A trivial CMake file is provided but if you're not using Cmake, all 
 you have to do is link the 2 .cpp files into a loadable .dll/.so file.
 
-# using in Julia
-You will first include "importcpp.jl" in your julia session. After that you can use ImportCPP( "path/to/dll_name" ). Note that you shuld leave off the .so or .dll extension.
+# Using in Julia
+You will first include "importcpp.jl" in your julia session. After that you can use ImportCPP( "path/to/dll_name" ). Note that you should leave off the .so or .dll extension.
+When you load the dll it will tell you what to type when you unload it. If you call an expoted function that has been unloaded, you will get an error.
+
+You can run the included test.jl by typing "julia test.jl".
 
 # Notebook interface demo
 These screenshots are me graphing a c++ implementation of "A Convenient Generalization of Schlick’s Bias and Gain Functions" (https://arxiv.org/pdf/2010.09714.pdf)
