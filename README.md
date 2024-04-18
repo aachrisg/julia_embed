@@ -5,7 +5,7 @@ These standalone files implement a simple system for exporting functions from c+
 so that you can recompile your code and load new versions while debugging.
 
 NOTE that only very basic functionality is provided. In particular not many argument types are supported. This is easily fixable. Even in this primitive state I was easily able
-to accomplish what I wanted - the ability to interactively produce a 3d realtime VR visualizatio of data manipulated inside of an interactive notebook.
+to accomplish what I wanted - the ability to interactively produce a 3d realtime VR visualization of data manipulated inside of an interactive notebook.
 
 # Building
 This code should build fine on any system. There are no dependencies and no Julia SDK is needed. A trivial CMake file is provided but if you're not using Cmake, all 
@@ -17,3 +17,11 @@ You will first include "importcpp.jl" in your julia session. After that you can 
 # Notebook interface demo
 These screenshots are me graphing a c++ implementation of "A Convenient Generalization of Schlick’s Bias and Gain Functions" (https://arxiv.org/pdf/2010.09714.pdf)
 inside of Jupyterlab.
+
+![image](https://github.com/aachrisg/julia_embed/assets/43356352/02f80cfa-9252-45d8-b3bb-d01d8d9d55b3)
+*C++ code in Emacs*
+
+![image](https://github.com/aachrisg/julia_embed/assets/43356352/ecc762a8-d78a-49f1-9a20-5a3a4e0ba378)
+*Plotting the c++ function interactively*
+
+
